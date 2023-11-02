@@ -6,6 +6,16 @@ StableDiffusionのLoRA学習する際に、キャプションから任意のタ�
 - Python + PySide6 で作りました
 - 動作確認はあんまりやってません
 
+
+## Update
+
+- 2023.11.2 / ver 1.1.0
+  - バックアップファイルが存在している時にバックアップファイルを作成するとエラーになるのを修正
+  - CUI用の `src/removeTag.py` を作成
+- 2023.11.1 / ver 1.0.0
+  - とりあえず作った
+
+
 ## 開発動機
 - キャプションファイルからタグを削除するのは[Dataset Tag Editor](https://github.com/toshiaki1729/stable-diffusion-webui-dataset-tag-editor)でできる
 - しかしタグをひとつずつ選択するのが面倒くさい
