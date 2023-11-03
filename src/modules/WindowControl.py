@@ -1,7 +1,8 @@
 import os
 import glob
-from PySide6.QtGui import QDragEnterEvent, QDropEvent
 from ppretty import ppretty
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QDragEnterEvent, QDropEvent
 from PySide6.QtWidgets import QDialog, QMessageBox
 from components.mainWindow import Ui_Dialog
 from modules.TagManage import TagManage
@@ -30,7 +31,7 @@ class WindowControl(QDialog):
   def startRemoveTag(self):
     RemoveTagControl.removePath = self.ui.inputRemovePath.text()
     RemoveTagControl.captionPath = self.ui.inputCaptionPath.text()
-    RemoveTagControl.isDeep = True if self.ui.checkDeep.checkState() else False
+    RemoveTagControl.isDeep = True if self.ui.checkDeep.checkState() == Qt.Checked else False
     RemoveTagControl.backupExt = self.ui.inputBackupExt.text()
 
     # 事前準備の結果とエラーメッセージ
